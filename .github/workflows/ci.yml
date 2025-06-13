@@ -25,12 +25,9 @@ jobs:
         run: echo "✅ No tests defined yet"
 
       # ✅ Secret Scan with TruffleHog
-      - name: Run TruffleHog secret scan
-        uses: trufflesecurity/trufflehog@main
-        with:
-          path: ./
-          version: latest
-          extra_args: '--only-verified --json'
+      - name: Run Gitleaks Secret Scan
+        uses: gitleaks/gitleaks-action@v2
+
 
       # 🐳 Docker Setup
       - name: Set up Docker Buildx
