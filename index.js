@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 // ---- Intentional Security Issue ----
 // Hard‑coded secret. REMOVE ME!
-const DB_PASSWORD = process.env.DB_PASSWORD;
+const DB_PASSWORD = "asuagsg";
 
 
 app.get('/', (req, res) => {
