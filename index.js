@@ -9,7 +9,7 @@ const DB_PASSWORD = "asuagsg";
 
 
 app.get('/', (req, res) => {
-  res.json({ status: 'ok', message: 'Hello insecure world! HI' });
+  res.json({ status: 'ok', message: DB_PASSWORD });
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
