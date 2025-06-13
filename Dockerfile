@@ -1,5 +1,5 @@
 # Intentionally outdated base image with known CVEs
-FROM node:12-alpine
+FROM node:18-alpine
 
 WORKDIR /usr/src/app
 
