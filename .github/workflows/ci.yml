@@ -26,8 +26,10 @@ jobs:
 
       - name: Run Gitleaks secret scan
         uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: "--verbose --redact --report-path=gitleaks-report.json"
+          scan-mode: pull-request
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -40,5 +42,5 @@ jobs:
         with:
           image-ref: 'secure-image'
           format: 'table'
-          exit-code: '0'      # Set to '1' if you want to fail on vulnerabilities
+          exit-code: '0'
           ignore-unfixed: true
