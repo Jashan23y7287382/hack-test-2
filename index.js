@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000;
 // Hard‑coded secret. REMOVE ME!
 const DB_PASSWORD = process.env.DB_PASSWORD;
 
+
 app.get('/', (req, res) => {
   res.json({ status: 'ok', message: 'Hello insecure world! HI' });
 });
